@@ -26,14 +26,15 @@
   background-color: white;
   width: 250px;
   height: 24px;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
   padding-left: 10px;
   border-radius: 10px;
-  color: rgb(55, 55, 196);
+  color: rgb(119, 119, 252);
   font-size: 24px;
   font-weight: bold;
   display: inline-block;
   margin: 0px 20px 0px 20px;
-  text-align: center
+  text-align: center;
+  border: black solid 1px;
 
 }
