@@ -1,0 +1,23 @@
+.header {
+  height: 150px;
+  background-color: rgb(55, 55, 196);
+
+}
+
+.title {
+  color: white;
+  font-size: 34px;
+  text-align: center
+}
+
+.instructions {
+  color: white;
+  font-size: 22px;
+  text-align: center
+}
+
+.scoreBar {
+  margin: 20px 200px 20px 200px;
+  display: flex;
+  justify-content: center;
+}
