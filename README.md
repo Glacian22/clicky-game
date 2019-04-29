@@ -2,6 +2,8 @@
 
 Click on the cards, but don't click the same one twice! The order will randomize after each click, and if you manage to get them all, don't worry, your clicks will clear and you can keep going! If you get a crazy high score, let me know!
 
+Play it here: https://glacian22.github.io/clicky-game/
+
 ### Technologies Used
 
 * React. Just...so much react. It's a challenging paradigm in terms of data flow between components, but it is certainly powerful.
