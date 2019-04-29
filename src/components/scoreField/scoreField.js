@@ -13,7 +13,13 @@ class ScoreField extends React.Component {
     )
   }
 
-
+  static getDerivedStateFromProps(nextProps, prevState){
+    if(nextProps.score!==prevState.score){
+      return{score: nextProps.score}
+    }
+    else
+    return null;
+  }
 }
 
 export default ScoreField;

@@ -1,0 +1,10 @@
+.cardArea{
+  margin: 40px 150px 40px 150px;
+  background-color: rgb(192, 192, 192);
+  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap
+
+
+}

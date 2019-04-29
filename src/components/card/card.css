@@ -1,0 +1,11 @@
+img {
+  height: 150px;
+  width: 150px;
+  background-color: rgb(119, 119, 252);
+  padding: 15px;
+  margin: 15px;
+}
+
+.wrapper {
+  display: inline-block
+}
