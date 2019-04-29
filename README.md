@@ -1,3 +1,22 @@
+# Clicky Memory Game
+
+Click on the cards, but don't click the same one twice! The order will randomize after each click, and if you manage to get them all, don't worry, your clicks will clear and you can keep going! If you get a crazy high score, let me know!
+
+Play it here: https://glacian22.github.io/clicky-game/
+
+### Technologies Used
+
+* React. Just...so much react. It's a challenging paradigm in terms of data flow between components, but it is certainly powerful.
+* Javascript
+* Node
+* Flexbox and CSS
+
+### Demo
+
+[![clicky-demo.gif](https://s3.gifyu.com/images/clicky-demo.gif)](https://gifyu.com/image/9TAp)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
