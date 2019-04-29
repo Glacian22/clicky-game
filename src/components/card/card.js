@@ -4,12 +4,8 @@ import "./card.css";
 
 function Card(props) {
 
-  let clicked = false;
-
   const handleClick = () => {
-
-    props.onClick(props.ident, clicked);
-    if(!clicked) clicked = !clicked;
+    props.onClick(props.ident);
   }
 
   return (

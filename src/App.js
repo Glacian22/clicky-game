@@ -3,6 +3,7 @@ import './App.css';
 import TitleBar from './components/titleBar/titleBar'
 import ScoreField from "./components/scoreField/scoreField"
 import Card from "./components/card/card"
+import CardArea from "./components/cardArea/cardArea"
 
 const images = [
   "http://static.tumblr.com/6e35e391a99d92051bf5a6e289809a07/02nxold/lfznyt5s6/tumblr_static_dl9xutmk8jcw0kgcok888g8gw.png",
@@ -17,7 +18,6 @@ const images = [
 ]
 
 let clickArr = [];
-let cardArr = [];
 
 class App extends React.Component {
 
@@ -27,6 +27,7 @@ class App extends React.Component {
     currentScore: 0,
     highScore: 0
   }
+
   resetScore = () => {
     this.setState({ currentScore: 0 })
   }
@@ -61,7 +62,7 @@ class App extends React.Component {
     if (!clickArr.includes(id)) {
       clickArr.push(id);
       this.incrementScore();
-      if(clickArr.length === images.length) clickArr = [];
+      if (clickArr.length === images.length) clickArr = [];
     } else {
       this.resetScore();
       clickArr = [];
@@ -69,6 +70,17 @@ class App extends React.Component {
         instructions: "Oops! Try playing again!"
       })
     }
+  }
+
+  cards = {
+    cardArr: images.map((elem, i) => {
+      return <Card
+        key={i}
+        ident={i}
+        image={elem}
+        onClick={this.beenClicked}
+      />
+    })
   }
 
   render() {
@@ -86,36 +98,12 @@ class App extends React.Component {
           <ScoreField message={"Current Score: "} score={this.state.currentScore} />
           <ScoreField message={"High Score: "} score={this.state.highScore} />
         </TitleBar>
-        {/* <button onClick={this.incrementScore}>score+1</button>
-        <button onClick={this.resetScore}>reset game</button> */}
 
         {/* loops over img array and makes a card for each */}
-        <div className="cardArea">
-          {cardArr = images.map((elem, i) => {
-            return <Card
-              key={i}
-              ident={i}
-              image={elem}
-              onClick={this.beenClicked}
-            />
-          })
-          }
-
-        </div>
-
-        {/* Need to make a loop that creates cards, each with their own ID so they can be identified easily
-    
-    Each card has an image, and an onclick function. 
-    
-    Onclick will check if it's been clicked before (boolean flag), and increment score if false. 
-
-    Increment high score if current score > high score
-
-    If alreadyClicked is true, end game by resetting current score
-    
-    Then randomize card layout.  
-    
-    */}
+        {/* <div className="cardArea">
+          {this.cards.cardArr}
+        </div> */}
+        <CardArea cards={this.cards.cardArr}/>
 
       </div>
     );
