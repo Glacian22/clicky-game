@@ -16,6 +16,9 @@ const images = [
   "https://68.media.tumblr.com/b582560cd64b3772a217e16038344e39/tumblr_omnhppP9G91v19j17o1_500.png"
 ]
 
+let clickArr = [];
+let cardArr = [];
+
 class App extends React.Component {
 
   state = {
@@ -51,6 +54,23 @@ class App extends React.Component {
     }
   }
 
+  beenClicked = (id) => {
+    console.log("Clicked:", id)
+
+    // check if this card has been clicked, if not increment score and add to tracking array
+    if (!clickArr.includes(id)) {
+      clickArr.push(id);
+      this.incrementScore();
+      if(clickArr.length === images.length) clickArr = [];
+    } else {
+      this.resetScore();
+      clickArr = [];
+      this.setState({
+        instructions: "Oops! Try playing again!"
+      })
+    }
+  }
+
   render() {
     return (
       // structure of components:
@@ -69,13 +89,14 @@ class App extends React.Component {
         {/* <button onClick={this.incrementScore}>score+1</button>
         <button onClick={this.resetScore}>reset game</button> */}
 
+        {/* loops over img array and makes a card for each */}
         <div className="cardArea">
-          {images.map((elem, i) => {
-            console.log("running", elem)
-            return <Card 
-            key={i} 
-            image={elem}
-            // onClick={beenClicked(i)}
+          {cardArr = images.map((elem, i) => {
+            return <Card
+              key={i}
+              ident={i}
+              image={elem}
+              onClick={this.beenClicked}
             />
           })
           }

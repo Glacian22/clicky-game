@@ -4,8 +4,9 @@ img {
   background-color: rgb(119, 119, 252);
   padding: 15px;
   margin: 15px;
+  display: inline-block
 }
 
-.wrapper {
-  display: inline-block
+.wrapper:hover {
+opacity: .5
 }
