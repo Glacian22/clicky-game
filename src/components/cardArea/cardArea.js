@@ -7,6 +7,7 @@ class CardArea extends React.Component {
     cards: this.props.cards
   }
 
+  // great code I found online for shuffling an array
   shuffle = () => {
     let cardArr = this.state.cards;
     for (let i = cardArr.length - 1; i > 0; i--) {

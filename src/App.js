@@ -62,6 +62,7 @@ class App extends React.Component {
     if (!clickArr.includes(id)) {
       clickArr.push(id);
       this.incrementScore();
+      // clear tracking array if all
       if (clickArr.length === images.length) clickArr = [];
     } else {
       this.resetScore();
